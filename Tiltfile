@@ -2,7 +2,7 @@ SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='registry.pgottam-demo.live/sup
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
 NAMESPACE = os.getenv("NAMESPACE", default='dev-tap')
 
-k8s_custom_deploy(
+k8s_custom_deploy( 
     'spring-sensors-consumer-web-dev',
     apply_cmd="tanzu apps workload apply -f config/workload.yaml --live-update" +
                " --local-path " + LOCAL_PATH +
